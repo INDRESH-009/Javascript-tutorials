@@ -15,7 +15,7 @@ for(let j=0;j<=10;j++){
     //if you dont have any else block you still have to complete the syntax using "" as above 
 }
 //using while loop
-let num = 0;
+let num = 0;        
 while(num<=10){
     num%2==0 ? console.log(num) : ""
     num++;
@@ -49,6 +49,17 @@ for(let i=1;i<=2;i++){
         console.log(`outerloop iteration no.${i} : innierloop iteration no.${j}`);
     }
 }
+
+/* why are pattern important 
+1. enhances thinking and problem solving skills 
+
+How to approach solving these pattern questions 
+1. Run the outer for loop the no.of times of rows / no.of lines 
+    no.of lines = no.of rows = no.of times the outer loop will run
+2. Identify for every row number how many columns are there.
+3. Undertand the type of elements in the  column like * or numbers etc.. 
+
+*/
 
 
 
@@ -222,14 +233,16 @@ for(let i=1;i<=rows;i++){   //outerloop for no.of rows
     console.log(pattern);
 }
 
+//HOW TO GET USER INPUT FROM TERMINAL IN JS :
+//First, you need to import the readline module:
 const readline = require('readline');
-
+//Then, create an interface to read input from the user:
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
+//Now, you can use the question() method to prompt the user for input:
 rl.question("Enter something: ", function(userInput) {
     console.log("You entered:", userInput);
-    rl.close();
+    rl.close(); //Finally, don't forget to close the interface after reading the input to avoid memory leaks:
 });
