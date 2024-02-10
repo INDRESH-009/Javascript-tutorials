@@ -208,10 +208,10 @@ Add a new line after each row
 
 */
 let rows = 5;
-for(let i=1;i<=rows;i++){
-    let pattern = "";
-    for(let j=1;j<=rows;j++){
-        if(i==1||i==rows||j==1||j==rows){
+for(let i=1;i<=rows;i++){   //outerloop for no.of rows
+    let pattern = "";       //prints new line for each outerloop iteration
+    for(let j=1;j<=rows;j++){   //innerloop for columns
+        if(i==1||i==rows||j==1||j==rows){   //for row 1 and 5 and column 1 and 5 print stars else print space.
             pattern += "*";
         }
         else{
@@ -221,3 +221,15 @@ for(let i=1;i<=rows;i++){
 
     console.log(pattern);
 }
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Enter something: ", function(userInput) {
+    console.log("You entered:", userInput);
+    rl.close();
+});
