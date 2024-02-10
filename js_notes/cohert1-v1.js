@@ -31,16 +31,16 @@ console.log(sum);
 
 //Question2
 //Print fibonacci series - it is a series of number where every number is the sum of the preceeding 2 numbers
-let t1 = 0,t2=1;
-let terms = 10;
-let nextterm;
-console.log(t1);
+let t1 = 0,t2=1;  //t1 and t2 are always same
+let terms = 10;  //no.of fibonacci terms required
+let nextterm;    //declaring  the nextterm variable
+console.log(t1); //logging t1 and t2 in console
 console.log(t2);
-for(let i=3;i<=terms;++i){
+for(let i=3;i<=terms;++i){  //iterating form term 3 
     nextterm = t1+t2
-    console.log(nextterm);
+    console.log(nextterm);  //once printed we change t1 to t2 and t2 to nextterm.
     t1 = t2;
     t2 = nextterm;
-    nextterm = t1+t2;
+    nextterm = t1+t2;       //now add the new 2 preceding terms 
 }
 
