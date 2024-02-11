@@ -23,11 +23,11 @@ API - native vs web
 
 //Question1 
 // sum from 1 to 100
-let sum = 0;
+let summ = 0;
 for(let i=0;i<=100;i++){
-    sum = sum + i;
+    summ = summ + i;
 }
-console.log(sum);
+console.log(summ);
 
 //Question2
 //Print fibonacci series - it is a series of number where every number is the sum of the preceeding 2 numbers
@@ -146,15 +146,17 @@ console.log(arithmatic(12,23,'+'));
 
 
 //In the below codebase we are trying to use 2 differnce seperate functions to calculate sum and difference but we use condotional statement just to call those 2 function based on the type of operation user needs to perform like sum or difference
+
+// /Note that in the below codebase we are calling a function inside another function. For eg - function calc is calling 2 functions sum and difference.
 function calc(a,b,type){
     if(type == "+"){
-        return sum(a,b);
+        return plus(a,b);
     }
     else if(type == "-"){
         return difference(a,b);
     }
 }
-function sum(a,b){
+function plus(a,b){
     return a+b;
 }
 function difference(a,b){
@@ -199,17 +201,61 @@ console.log(greet); //calling greet function
 //setTImeot is a fuction that takes 2 arguments where one of the argument is a function. This is called callbacks
 
 
+//Are we allowed to call a function inside another fuction - yes
+
+function square(n){
+    return n*n;
+}
+function squaresum(a,b){
+    let val1 = square(a);
+    let val2 = square(b);
+    return val1 + val2;
+} 
+console.log(squaresum(4,3));
+
+
+
+//Are we allowed to use a function as a parameter for another function - yes and its called callback function
+function sq(a){
+    return a*a;
+}
+function cb(a){
+    return a*a*a;
+}
+function calcsum(num1,num2,callback){
+    const val1 = callback(num1);
+    const val2 = callback(num2);
+    return val1+val2;
+}
+console.log(calcsum(10,10,sq));
+console.log(calcsum(10,10,cb));
+
+//Are we allowed to use a function as a parameter ? - yes and its called anonymous function
+
+//these functoions dont require any function name because they cant be called anywhere lese if they are passes as a parameter , so these nameless functions are called anonymous function
+
+
+function calcmodulo(a,b,fn){    //3 parameters, 2 numbers and a function
+    console.log(fn) //we are logging the function to see its type.on line 243 we see the argument directly has the fucnction body . This is called anonymous function
+    const mod = fn(a,b);    //now we pass the fn and save its result in mod variable
+    return a+b+mod;         //return statement
+}
+console.log(calcmodulo(13,7,function(a,b){  //function as argument has to do the a%b
+    return a%b;
+}))
+
+
+
+
+
 
 //Assignment 1
 // Question1 - create a counter in js that counts from 30 to 0
 // Question2 - calculate the time it takes between the setTimeout call and the inner fuction actually running
 // Question3 - create a terminal clock (HH:MM:SS)
-function counter(){
-    for(let i=30;i>0;i--){
-        console.log(i);
-        setTimeout(counter,1000);
-    }
-}
 
-console.log(counter);
+
+
+
+
 
