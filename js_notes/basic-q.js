@@ -296,3 +296,6 @@ let car = {
 }
 console.log(car);
 
+// Q19 Write a method to display all properties of the car object.
+
+
