@@ -1,4 +1,4 @@
-This is my complete patha nd roadmap with the code i have practised to master javascript.
+This is my complete path and roadmap with the code i have practised to master javascript.
 This documentation of my journey will be the proof of my work and improvement 
 
 progression and topics learned 
