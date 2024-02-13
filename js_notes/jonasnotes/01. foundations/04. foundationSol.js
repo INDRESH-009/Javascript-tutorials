@@ -168,24 +168,54 @@ decider(avgfordol,avgforkola);
 
 
 //basic array operations
-let arr1 = [1,2,3,4];    //declaring an array
+let arr1 = [1,2,3,4];           //declaring an array in js
 console.log(arr1);
 
-arr1.push("jay");       //adding an elements in an array at the end
+arr1.push("jay");               //adding an elements in an array at the end
 console.log(arr1);
 
-arr1.unshift("ram");    //adding an elements in an array at the beginning
+arr1.unshift("ram");            //adding an elements in an array at the beginning
 console.log(arr1);
 
-arr1.pop();             //removing an element from an array always from the end 
+arr1.pop();                     //removing an element from an array always from the end 
 console.log(arr1);
 
-arr1.shift();           //removing an element from an array always from the first
+arr1.shift();                   //removing an element from an array always from the first
 console.log(arr1);
 
 let index = arr1.indexOf(1);    //finding the index of a particular element in an array
 console.log(index);
 console.log(arr1.indexOf(4));
 
-console.log(arr1.includes(3));
+console.log(arr1.includes(3));    //check if that element is in array or not-use the includes() method - return boolean
 console.log(arr1.includes("manoj"));
+
+
+/*
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+2. And now let's use arrays! So create an array 'bills' containing the test data below.
+3. Create an array 'tips' containing the tip value for each bill, calculated from the function you created before.
+4. BONUS: Create an array 'total' containing the total values, so the bill + tip.
+
+TEST DATA: 125, 555 and 44
+
+HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
+
+GOOD LUCK 😀
+*/
+function tip15(billamt){
+    return 0.15*billamt;
+}
+function tip20(billamt){
+    return 0.2*billamt;
+}
+function finalbill(billamt){
+    let tip;
+    billamt>50 && billamt <300 ? tip = tip15(billamt) : tip = tip20(billamt);
+    console.log(`The tip amt is ${tip} and the total bill is ${tip+billamt}`);
+}
+
+
+finalbill(275);

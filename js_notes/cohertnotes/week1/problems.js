@@ -11,7 +11,6 @@ Loops:
 Write a program to print the first 10 natural numbers using a loop.
 Create a multiplication table for a given number (e.g., 5) using a loop.
 
-
 Operators:
 Write a program to calculate the area of a rectangle given its length and width.
 Convert temperature from Celsius to Fahrenheit and vice versa using appropriate operators.
@@ -33,13 +32,11 @@ Some extra advanced questions on arrays
 2.Implement a function to find the maximum and minimum elements in an array.
 3.Write JavaScript code to remove duplicate elements from an array.
 
-
  Questions based on Objects 
 1.Create a JavaScript object representing a car with properties like make, model, year, and color.
 2.Write a method to display all properties of the car object.
 3.Implement a function to calculate the total cost of maintenance for the car based on its age and mileage.
 */
-
 
 
 //Q1
