@@ -83,10 +83,19 @@ console.log(time_after_execution - time_before_execution);
 
 
 //make a countdown clock using js for 30 seconds 
-function Counter(sec){
-    for(let i=0;i<=100;i++){
-        setInterval(1000);
-        console.log(i);
+// function Counter(sec){
+//     for(let i=0;i<=100;i++){
+//         setInterval(1000);
+//         console.log(i);
+//     }
+// }
+// Counter(30);
+
+function counter(sec){
+    let seconds =0 ;
+    for(let i=0;i<=sec;i++){
+        seconds += i;
     }
+    return console.log(seconds);
 }
-Counter(30);
+setInterval(counter(30),1000);

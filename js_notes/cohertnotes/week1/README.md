@@ -35,8 +35,12 @@ progression and topics learned
 31. Anonymous function
 32. Builtin-functions in string -> 
      String: length, indexOf(), lastIndexOf(), slice(), substring(), replace(),split(), trim(), toUpperCase(), toLowerCase(), etc.
-33. Builtin-functions in string -> parseInt and parseFloat
+33. Builtin-functions in numbers -> parseInt and parseFloat
 34. Builtin-functions in arrays ->  
     Array:   push(), pop(), shift(), unshift(), splice(), slice(),concat(), forEach(), map(), filter(), reduce(), find(), sort()
 35. What are classes and how to declare them
-36. 
+36. How to use the date and time class in js
+37. What is json package
+38. builtin math functions/methods
+39. objects and methods to manipulate objects 
+40. 
