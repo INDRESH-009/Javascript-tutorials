@@ -173,6 +173,44 @@ console.log(mathUtil.PI);
 
 
 
+class bank{
+    constructor(name,accNo,type_of_account,bal){
+        this.name = name;
+        this.accno = accNo;
+        this.type = type_of_account;
+        this.bal = bal;
+    }
+    deposit(amount){
+        this.bal = this.bal+amount;
+        return `Your account ${this.accno} has been credited with ${amount}`;
+    }
+    withdraw(money){
+        if(money<=this.bal){
+            console.log(`rupees ${money} is debited from your account`);
+            this.bal = this.bal - money;
+            return this.bal;
+        }
+        else{
+            let output = `you have insufficient balance to debit ${money} rupees`;
+            return output;
+        }
+    }
+    namebal(accno){
+        if(accno === this.accno){
+            return (`${this.name} has a balance of ${this.bal}`)
+        }
+        
+    }
+}
+let indresh = new bank("indresh",32434523,"student account",4800);
+let punit = new bank("fuck",9999999999,"icici",120);
 
+let addamt = punit.deposit(500);
+console.log(addamt);
 
+let getamt = punit.withdraw(30);
+console.log(getamt);
+
+let getbal = punit.namebal(9999999999);
+console.log(getbal);
 
