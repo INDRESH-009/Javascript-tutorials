@@ -245,23 +245,6 @@ console.log(calcmodulo(13,7,function(a,b){  //function as argument has to do the
 }))
 
 
-//builtin functions to do string manipulation
-//string are a bunch of characters 
-
-// 1.LENGTH OF A STRING - (.length property)
-let str = "hello world";
-console.log(str.length);    //.length is used to get length of the string.It is a property of an str and not a method 
-
-// 2.INDEX OF ELEMENTS IN A STRING - (indexOf() and lastIndexOf() method)
-console.log(str.indexOf("w"));   //.indexOf(target) will give the index of that character in that string
-console.log(str.indexOf("rld")); // for a bunch of word the 1st letters index is considered
-console.log(str.indexOf(" "));   // here space is also being indexed
-console.log(str.indexOf("x"));   //returns -1 if that element is not present 
-
-
-let str2 = "hello world world world";   //string having the same world repeated 
-console.log(str2.indexOf("world"));          //gives the first index only
-console.log(str2.lastIndexOf("world"));      //gives the last index of that word
 
 
 
@@ -307,15 +290,6 @@ console.log(str2.lastIndexOf("world"));      //gives the last index of that word
 
 
 
-
-
-
-
-
-//Assignment 1
-// Question1 - create a counter in js that counts from 30 to 0
-// Question2 - calculate the time it takes between the setTimeout call and the inner fuction actually running
-// Question3 - create a terminal clock (HH:MM:SS)
 
 
 

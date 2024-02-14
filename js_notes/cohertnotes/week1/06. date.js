@@ -99,3 +99,15 @@ function counter(sec){
     return console.log(seconds);
 }
 setInterval(counter(30),1000);
+
+
+//Assignment 1
+// Question1 - create a counter in js that counts from 30 to 0
+// Question2 - calculate the time it takes between the setTimeout call and the inner fuction actually running
+// Question3 - create a terminal clock (HH:MM:SS)
+
+
+
+
+
+
