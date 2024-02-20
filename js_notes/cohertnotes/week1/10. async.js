@@ -31,13 +31,14 @@ setTimeout(findsumto10,1000);  //global function that helps to run a function af
 console.log("Hello");
 
 //How this is a async function - 
-//First when the program is executed the control reaches line 20 , the function sumOfn is declareed and the control moves to line 27 and the function findsumto10 is also declared. then control reaches line 30 where the global function settimeout is called and it has been asked to execute the findsumto10 function but only after 1 sec so instead of waiting there for a second and executing that line and then moving to the next function , the control reaches the next line and executes the 31st line and logs hello in the console and by that time 1 sec is completed and so the settimeout function also executes 
+//First when the program is executed the control reaches line 20 , the function sumOfn is declareed and the control moves to line 27 and the function findsumto10 is also declared. then control reaches line 30 where the global function settimeout is called and it has been asked to execute the findsumto10 function but only after 1 sec so instead of waiting there for a second and executing that line and then moving to the next function , the control reaches the next line and executes the 31st line and logs hello in the console and by that time the async fnction which was being processed gets into the callback queue and when the call stack is free the event loop pushes the settimeout function from the callback queue to the call stack and it is executed.
 
-//In this example we observe that instead of waiting in line 30 for a second and executing it , context switching happens and the control reaches next line and executes it , by that time 1sec happens and then the settimeout function is processed and is waiting in the callback queue. When the  . 
+//In this example we observe that instead of waiting in line 30 for a second and executing it , context switching happens and the control reaches next line and executes it , by that time 1sec happens and then the settimeout function is processed and is waiting in the callback queue. Upon the callstack being free the evenloop pushes these functions in the callback queue to the callstack and the function is executed.
 
 //Concept of busy wait 
 //We can get the same functionnality of delayed execution like the settimeout function but in syncronous nature using the busy wait concept
-//Here suppose we want a statement to be executed after few seconds of delay but syncronously then we use busy wait where we make the thread busy executing a function that is very expensive (time consuming) and that creates a delay in the execution of the next statement
+//Here suppose we want a statement to be executed after few seconds of delay but syncronously then we use busy wait where we make the thread busy executing a function that is very expensive (time consuming) and that creates a delay in the execution of the next statement.
+//In this process since the function is not async the function is kept on running in the callstack itself instead of running it seperately and waiting in the callback queue like the async function does. This gives the delayed output slowing down the overall exection of the program
 
 
 function syncSleep(){
@@ -80,6 +81,20 @@ for(let i=0;i<=100;i++){
 }
 console.log(sum);
 
+//Loupe example (ran in http://latentflip.com/loupe and understood via visualisation the working of Call Stack, Web Apis, Callback Queue and Event Loop🔄)
+
+//Ex 
+console.log("Code begins");
+
+setTimeout(function(){
+    console.log("async function 1");
+}, 20000);
+
+setTimeout(function(){
+    console.log("async function 2");
+}, 10000);
+
+console.log("Code ends");
 
 
 // 1. Before promise we used to depend on callback functions which would result in 1.) Callback Hell (Pyramid of doom) | 2.) Inversion of control
@@ -92,5 +107,3 @@ console.log(sum);
 
 // 3. To avoid callback hell (Pyramid of doom) => We use promise chaining. This way our code expands vertically instead of horizontally. Chaining is done using '.then()'
 // 4. A very common mistake that developers do is not returning a value during chaining of promises. Always remember to return a value. This returned value will be used by the next .then()
-
-
