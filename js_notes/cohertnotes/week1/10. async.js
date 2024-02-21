@@ -107,3 +107,20 @@ console.log("Code ends");
 
 // 3. To avoid callback hell (Pyramid of doom) => We use promise chaining. This way our code expands vertically instead of horizontally. Chaining is done using '.then()'
 // 4. A very common mistake that developers do is not returning a value during chaining of promises. Always remember to return a value. This returned value will be used by the next .then()
+
+
+const inventory = {
+    sunglass : 120,
+    pants : 24,
+    shirts : 40,
+}
+const stockchecker = (resolve,reject) => {
+    if(inventory.sunglass > 0){
+        resolve("Sunglasses are available");
+    }
+    else{
+        reject("Sunglasses are out of stock");
+    }
+}
+const mypromise = new Promise(stockchecker);
+console.log(mypromise);
