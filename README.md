@@ -1,6 +1,25 @@
 This is my complete path and roadmap with the code i have practised to master javascript.
 This documentation of my journey will be the proof of my work and improvement 
 
+
+High level progression 
+-variables and datatypes 
+-Different kinds of operators and its precedence 
+-Expression , statements
+-str concatination , multiline string, comments and template literals 
+-conditional if - else if - else statements , switch statements and terenary operator 
+-type conversion and type cohersion in - str , number and boolean 
+-Loops in js , how to do nested looping - for,while,do while 
+-Arrays and its depths
+-Functions and its depths 
+-Objects and its depths 
+-Classes and its depths 
+-OOPS concepts in JS
+-Callbacks
+-Asyncronous Javascript concept
+-Promises 
+-Async/await  
+
 progression and topics learned 
 1.  What are value 
 2.  What is a variable 
