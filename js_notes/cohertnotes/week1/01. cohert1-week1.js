@@ -3,7 +3,7 @@ Video 1
 
 Introduction
 
-Initially we could communicate with the computer only using binary and assembly code but it was not a optimal way to write code because each hardware processor have different assembly code to do the same process so the software solutions can't be scaled. Thats the reason why we are having high level languages now which are comparitively easy to write as well as scalable because the comiler compiles the high level code into machine understandable code.
+Initially we could communicate with the computer only using binary and assembly code but it was not a optimal way to write code because each hardware processor have different assembly code to do the same process so the software solutions can't be scaled. Thats the reason why we are having high level languages now which are comparitively easy to write as well as scalable because the compiler compiles the high level code into machine understandable code.
 
 JS Architecture 
 
